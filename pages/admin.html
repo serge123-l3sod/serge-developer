@@ -1,0 +1,192 @@
+<!-- <!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin - Amategeko yose y’abakiriya</h1>
+    </header>
+
+    <main>
+        <section id="orders"></section>
+    </main>
+
+     Firebase SDK 
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <script>
+        // 👉 Hindura config yawe hano n’iyo watanze mbere
+        const firebaseConfig = {
+            apiKey: "AIzaSy...xyz",
+            authDomain: "idukaonline.firebaseapp.com",
+            databaseURL: "https://idukaonline-default-rtdb.firebaseio.com",
+            projectId: "idukaonline",
+            storageBucket: "idukaonline.appspot.com",
+            messagingSenderId: "1234567890",
+            appId: "1:1234567890:web:abcdef123456"
+        };
+
+        // 1. Tangira Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // 2. Fungura orders
+        const ordersSection = document.getElementById("orders");
+
+        db.ref("orders").on("value", snapshot => {
+            const orders = snapshot.val();
+            ordersSection.innerHTML = "";
+
+            if (!orders) {
+                ordersSection.innerHTML = "<p>Nta tegeko riraboneka.</p>";
+                return;
+            }
+
+            Object.entries(orders).forEach(([key, order]) => {
+                let itemsHTML = order.items.map(item => `
+                    <li>${item.name} - Frw ${item.price}</li>
+                `).join("");
+
+                ordersSection.innerHTML += `
+                    <div class="order">
+                        <h3>📦 ${order.name} (${order.phone})</h3>
+                        <p><strong>Email:</strong> ${order.email || '-'}</p>
+                        <p><strong>Aho atuye:</strong> ${order.address}</p>
+                        <p><strong>Igihe:</strong> ${new Date(order.createdAt).toLocaleString()}</p>
+                        <ul>${itemsHTML}</ul>
+                        <hr>
+                    </div>
+                `;
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .order {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h3 {
+            color: #333;
+        }
+    </style>
+</body>
+</html>
+-->
+
+ 
+  
+
+
+
+
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Serge Shop Online</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="sn-logo">SN</div>
+                <h1>Serge Shop - Admin Dashboard</h1>
+            </div>
+            <button id="logoutBtn" style="display:none;">logout</button>
+        </div>
+        
+        <div id="contain">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Bags.html">Bags</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li> 
+                <li><a href="index.html">index</a></li>  
+            </ul>
+        </div>
+    </header>
+    
+    <!-- <div class="count">
+        <h1>welcome to serge shop Online</h1>
+      </div>
+    
+      <div id="loader-spinner">
+        <div id="style"></div>
+        <button onclick="enter()" id="button">ENTER</button>
+      </div>
+     <script src="../js/index.js"></script> -->
+
+
+
+    <main>
+        <div id="login-section">
+            <h2>🔐 Log in as Administrator</h2>
+            <input type="password" id="admin-pass" placeholder="admin-pass" />
+            <button onclick="login()">login</button>
+        </div>
+        
+        <div id="dashboard" style="display:none;">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>📊 Law</h3>
+                    <p id="order-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>💰 All money</h3>
+                    <p id="total-sales">Frw 0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>🛒 product</h3>
+                    <p id="product-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>👥 Customers</h3>
+                    <p id="customer-count">0</p>
+                </div>
+            </div>
+            
+            <h2>📦 All laws</h2>
+            <div id="orders"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Serge shop Online</h3>
+                <p>Turi abafatanyabikorwa b'igihe kigezweho, dutanga serivisi zizewe kandi zinoze.</p>
+                <p>We are modern partners, providing reliable and efficient services.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: ntakirutimanaserge3@gmail.com</p>
+                <p>Telefoni: +250 724538546</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serge shop Online. Uburenganzira bwose burabitswe.</p>
+        </div>
+    </footer>
+<script src="../js/Admin.js"></script>
+    
+</body>
+</html>

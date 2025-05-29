@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bags - Serge shop Online</title>
+    <link rel="stylesheet" href="../css/Bags.css">
+</head>
+<body>
+    <div id="contain">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Bags.html">Bags</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="admin.html">Admin</a></li>  
+            <li><a href="index.html">index</a></li> 
+        </ul>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="sn-logo">SN</div>
+            <h1>Serge shop Online</h1>
+        </div>
+        <div class="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+    </header>
+
+
+    <!-- <div class="count">
+        <h1>welcome to serge shop Online</h1>
+      </div>
+    
+      <div id="loader-spinner">
+        <div id="style"></div>
+        <button onclick="enter()" id="button">ENTER</button>
+      </div>
+     <script src="../js/index.js"></script> -->
+
+    <main>
+        <section class="products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Backpack">
+                <h2>Backpack</h2>
+                <p>Frw 25,000</p>
+                <button onclick="addToCart()">Put in the bag.</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Handbag">
+                <h2>Handbag</h2>
+                <p>Frw 35,000</p>
+                <button onclick="addToCart()">Put in the bag.</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Travel Bag">
+                <h2>Travel Bag</h2>
+                <p>Frw 45,000</p>
+                <button onclick="addToCart()">Put in the bag.</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Leather Bag">
+                <h2>Leather Bag</h2>
+                <p>Frw 55,000</p>
+                <button onclick="addToCart()">Put in the bag.</button>
+            </div>
+            
+            <!-- <div class="product">
+                <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="School Bag">
+                <h2>School Bag</h2>
+                <p>Frw 18,000</p>
+                <button onclick="addToCart()">Shyira mu gikapu</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1566150902887-9679ecc155ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Laptop Bag">
+                <h2>Laptop Bag</h2>
+                <p>Frw 32,000</p>
+                <button onclick="addToCart()">Shyira mu gikapu</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Messenger Bag">
+                <h2>Messenger Bag</h2>
+                <p>Frw 28,000</p>
+                <button onclick="addToCart()">Shyira mu gikapu</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1595341595379-cf0f907a0a11?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tote Bag">
+                <h2>Tote Bag</h2>
+                <p>Frw 12,000</p>
+                <button onclick="addToCart()">Shyira mu gikapu</button>
+            </div> -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Serge shop Online</h3>
+                <p>Turi abafatanyabikorwa b'igihe kigezweho, dutanga serivisi zizewe kandi zinoze.</p>
+                <p>We are modern partners, providing reliable and efficient services.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: ntakirutimanaserge3@gmail.com</p>
+                <p>Telefoni: +250 724538546</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serge shop Online. Uburenganzira bwose burabitswe.</p>
+        </div>
+    </footer>
+
+    <script src="../js/Bags.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igikapu cyawe</title>
+    <link rel="stylesheet" href="../css/cort.css">
+    <style>
+        /* Basic styling for the cart page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #contain {
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        
+        #contain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        #contain a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        #total {
+            text-align: right;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .footer-bottom {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <ul>
+            <li><a href="admin.html">admin</a></li>
+            <li><a href="checkout.html">checkout</a></li>
+            <li><a href="cort.html">cort</a></li>
+            <li><a href="index.html">index</a></li>
+        </ul>
+    </div>
+    
+    <header>
+        <h1>Igikapu cyawe</h1>
+        <a href="index.html">← Subira kuri serivisi</a>
+    </header>
+    
+    <main>
+        <section id="cart-items"></section>
+        <h2 id="total"></h2>
+        <button id="checkout-btn" style="display: none; width: 100%; padding: 1rem; background-color: #2ecc71; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer;">Komeza ugure</button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Serge shop Online</h3>
+                <p>Turi abafatanyabikorwa b'igihe kigezweho, dutanga serivisi zizewe kandi zinoze.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ibyiciro</h3>
+                <ul>
+                    <li><a href="#">Ahabanza</a></li>
+                    <li><a href="#">Serivisi</a></li>
+                    <li><a href="#">Abakozi</a></li>
+                    <li><a href="#">Tuvugishe</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Twandikire</h3>
+                <p>Email: www.ntakirutimanaserge3@gmail.com</p>
+                <p>Telefoni: +250724538546</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serge shop Online. Uburenganzira bwose burabitswe.</p>
+        </div>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        function displayCart() {
+            const cartItemsSection = document.getElementById('cart-items');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            cartItemsSection.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartItemsSection.innerHTML = '<p>Igikapu cawe kirahari!</p>';
+                checkoutBtn.style.display = 'none';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsSection.innerHTML += `
+                    <div class="product">
+                        <div>
+                            <h2>${item.name}</h2>
+                            <p>Frw ${item.price.toLocaleString()}</p>
+                        </div>
+                        <button onclick="removeItem(${index})">Kuramo</button>
+                    </div>
+                `;
+            }); -->
+
+           
+
+
+
+
+
+
+
+            
+ 
+ 
+ 
+ 
+ 
+ <!-- <!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Igikapu cyawe</title>
+    <link rel="stylesheet" href="../css/cort.css">
+</head>
+<body>
+
+    <div id="contain">
+        <ul>
+            <a href="admin.html">admin</a></li>
+            <a href="checkout.html">checkout</a></li>
+            <a href="cort.html">cort</a></li>
+            <a href="index.html">index</a></li>
+        </ul>
+    </div>
+    
+    
+    <header>
+        <h1>bags</h1>
+        <a href="index.html">← back to shop</a>
+    </header>
+    
+    
+
+    <main>
+        <section id="cart-items"></section>
+        <h2 id="total"></h2>
+    </main>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        function displayCart() {
+            const cartItemsSection = document.getElementById('cart-items');
+            cartItemsSection.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsSection.innerHTML += `
+                    <div class="product">
+                        <h2>${item.name}</h2>
+                        <p>Frw ${item.price}</p>
+                        <button onclick="removeItem(${index})">Kuramo</button>
+                    </div>
+                `;
+            });
+
+            document.getElementById('total').textContent = 'Igiteranyo: Frw ' + total;
+        }
+
+        <script src="../js/cort.js"></script>
+
+        
+       
+        <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Serge shop Online</h3>
+                <p>Turi abafatanyabikorwa b’igihe kigezweho, dutanga serivisi zizewe kandi zinoze.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ibyiciro</h3>
+                <ul>
+                    <li><a href="#">Ahabanza</a></li>
+                    <li><a href="#">Serivisi</a></li>
+                    <li><a href="#">Abakozi</a></li>
+                    <li><a href="#">Tuvugishe</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>coll</h3>
+                <p>Email: www.ntakirutimanaserge3@gmail.com</p>
+                <p>tel: +250724538546</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serge shop Online. Uburenganzira bwose burabitswe.</p>
+        </div>
+    </footer>
+
+
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            displayCart();
+        }
+
+        displayCart();
+
+        
+        
+        
+    </script>
+</body>
+</html>  -->
