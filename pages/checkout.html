@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Serge shop Online</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <div id="contain">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Bags.html">Bags</a></li>
+            <li><a href="checkout.html" class="active">Checkout</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            
+        </ul>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="sn-logo">SN</div>
+            <h1>Serge shop Online</h1>
+        </div>
+        <div class="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+    </header>
+
+    <div class="count">
+        <h1>welcome to serge shop Online</h1>
+      </div>
+    
+      <!-- <div id="loader-spinner">
+        <div id="style"></div>
+        <button onclick="enter()" id="button">ENTER</button>
+      </div>
+     <script src="../js/index.js"></script> -->
+    
+    <main>
+        <section class="checkout-section">
+            <div class="checkout-form">
+                <h2>Enter your information</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">address/label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">city</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">country</label>
+                            <select id="country" required>
+                                <option value="">choose the country</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Tanzania">Tanzania</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Keep shopping</button>
+                </form>
+            </div>
+        </section>
+        
+        <section class="order-summary">
+            <div class="summary-card">
+                <h2>total</h2>
+                
+                <div class="summary-item">
+                    <span>Backpack</span>
+                    <span>Frw 25,000</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span>Handbag</span>
+                    <span>Frw 35,000</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span>Travel Bag</span>
+                    <span>Frw 45,000</span>
+                </div>
+                
+                <div class="summary-total">
+                    <span>total</span>
+                    <span>Frw 105,000</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comment-section">
+            <h2>Ibitekerezo/throughts</h2>
+            <button id="show-comment-btn" class="btn">Write a comment</button>
+            
+            <div class="comment-form" id="comment-form">
+                <form id="post-form">
+                    <textarea id="comment-text" placeholder="Write your comment..." required></textarea>
+                    <div>
+                        <button type="submit" class="btn">Send it</button>
+                        <button type="button" id="cancel-comment-btn" class="btn" style="background-color: #666; margin-top: 0.5rem;">Kureka</button>
+                    </div>
+                </form>
+            </div>
+            
+            <ul class="blog-list" id="blog-list"></ul>
+            
+            <div style="margin-top: 1rem;">
+                <span id="username-display"></span>
+                <button id="logout-btn" class="btn" style="background-color: #666; margin-top: 0.5rem;">logout</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>Serge Shop Online</h3>
+                <p>Turi abafatanyabikorwa b'igihe kigezweho, dutanga serivisi zizewe kandi zinoze.</p>
+                <p>We are modern partners, providing reliable and efficient services.</p>
+            </div>
+            
+            <div>
+                <h3>Write to us</h3>
+                <p>Email: ntakirutimanaserge3@gmail.com</p>
+                <p>Telefoni: +250 0724538546</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Serge Shop Online. Uburenganzira bwose burabitswe.</p>
+        </div>
+    </footer>
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+</html>
+
+
+
+
