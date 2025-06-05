@@ -1,99 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="rw">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Admin - Amategeko yose y’abakiriya</h1>
-    </header>
 
-    <main>
-        <section id="orders"></section>
-    </main>
-
-     Firebase SDK 
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-
-    <script>
-        // 👉 Hindura config yawe hano n’iyo watanze mbere
-        const firebaseConfig = {
-            apiKey: "AIzaSy...xyz",
-            authDomain: "idukaonline.firebaseapp.com",
-            databaseURL: "https://idukaonline-default-rtdb.firebaseio.com",
-            projectId: "idukaonline",
-            storageBucket: "idukaonline.appspot.com",
-            messagingSenderId: "1234567890",
-            appId: "1:1234567890:web:abcdef123456"
-        };
-
-        // 1. Tangira Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-
-        // 2. Fungura orders
-        const ordersSection = document.getElementById("orders");
-
-        db.ref("orders").on("value", snapshot => {
-            const orders = snapshot.val();
-            ordersSection.innerHTML = "";
-
-            if (!orders) {
-                ordersSection.innerHTML = "<p>Nta tegeko riraboneka.</p>";
-                return;
-            }
-
-            Object.entries(orders).forEach(([key, order]) => {
-                let itemsHTML = order.items.map(item => `
-                    <li>${item.name} - Frw ${item.price}</li>
-                `).join("");
-
-                ordersSection.innerHTML += `
-                    <div class="order">
-                        <h3>📦 ${order.name} (${order.phone})</h3>
-                        <p><strong>Email:</strong> ${order.email || '-'}</p>
-                        <p><strong>Aho atuye:</strong> ${order.address}</p>
-                        <p><strong>Igihe:</strong> ${new Date(order.createdAt).toLocaleString()}</p>
-                        <ul>${itemsHTML}</ul>
-                        <hr>
-                    </div>
-                `;
-            });
-        });
-    </script>
-
-    <style>
-        body {
-            font-family: sans-serif;
-            background: #f4f4f4;
-            padding: 20px;
-        }
-
-        .order {
-            background: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-        }
-
-        h1, h3 {
-            color: #333;
-        }
-    </style>
-</body>
-</html>
--->
-
- 
-  
-
-
-
-
+<!-- admin.html -->
 <!DOCTYPE html>
 <html lang="rw">
 <head>
@@ -115,26 +21,13 @@
         <div id="contain">
             <ul>
                 <li><a href="Home.html">Home</a></li>
-                <li><a href="Bags.html">Bags</a></li>
+                <li><a href="bags.html">bags</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="admin.html" class="active">Admin</a></li> 
-                  
+                <li><a href="admin.html" class="active">Admin</a></li>   
             </ul>
         </div>
     </header>
     
-    <!-- <div class="count">
-        <h1>welcome to serge shop Online</h1>
-      </div>
-    
-      <div id="loader-spinner">
-        <div id="style"></div>
-        <button onclick="enter()" id="button">ENTER</button>
-      </div>
-     <script src="../js/index.js"></script> -->
-
-
-
     <main>
         <div id="login-section">
             <h2>🔐 Log in as Administrator</h2>
